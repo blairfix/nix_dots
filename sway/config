@@ -1,0 +1,207 @@
+# sway configurations
+#----------------------------------------
+
+# mod key
+set $mod Mod1
+
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+
+# Your preferred terminal emulator
+set $term alacritty
+
+# Application launcher
+for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 5 
+set $menu exec $term --class=launcher -e /usr/bin/sway-launcher-desktop
+bindsym shift+space exec $menu
+
+
+# number lock on
+input * xkb_numlock enable
+
+# wallpaper 
+output * bg /home/blair/Dropbox/backgrounds/milky-way-g73224e2c3_1920.jpg fill
+
+# font for window titles. 
+font pango:DejaVu Sans Mono 10
+
+# window decorations
+default_border pixel 3
+
+# volume in pulse audio.
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% 
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle 
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
+
+# screen brightness
+bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
+
+# floating windows
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+t exec alacritty
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontally
+bindsym $mod+h split h
+
+# split in vertically
+bindsym $mod+v split v
+
+# fullscreen
+bindsym $mod+f fullscreen toggle
+
+# change container layout
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# workspaces
+set $workspace1 1
+set $workspace2 2
+set $workspace3 3
+set $workspace4 4
+set $workspace5 5
+set $workspace6 6
+set $workspace7 7
+set $workspace8 8
+set $workspace9 9
+set $workspace10 10
+
+# switch workspace
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
+
+# move window to workspace
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+
+# resize window
+mode "resize" {
+
+	# keyboard
+	bindsym j resize shrink width 5 px or 1 ppt
+	bindsym k resize grow height 5 px or 1 ppt
+	bindsym l resize shrink height 5 px or 1 ppt
+	bindsym semicolon resize grow width 5px or 1 ppt
+
+	# arrow keys
+	bindsym Left resize shrink width 5 px or 1 ppt
+	bindsym Down resize grow height 5 px or 1 ppt
+	bindsym Up resize shrink height 5 px or 1 ppt
+	bindsym Right resize grow width 5 px or 1 ppt
+
+	# leave resize mode
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# clean function
+bindsym $mod+p exec /home/blair/Dropbox/bin/clean.sh
+
+# latex
+bindsym $mod+z exec /home/blair/Dropbox/bin/latex_run.sh
+
+# gammastep
+exec gammastep &
+
+# start firefox
+bindsym $mod+x exec MOZ_ENABLE_WAYLAND=1 firefox
+bindsym $mod+shift+x exec MOZ_ENABLE_WAYLAND=1 firefox -P "blog"
+
+# gvim
+bindsym $mod+g exec /home/blair/Dropbox/bin/gvim
+
+# disable xwayland
+#xwayland disable
+
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+
+    position bottom
+
+   # time
+    status_command while /home/blair/Dropbox/bin/status.sh; do sleep 20; done
+
+    colors {
+
+        statusline #ffffff
+	background #626262
+
+    }
+
+    # font
+    font pango:Ubuntu 13
+
+}
+
