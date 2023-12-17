@@ -90,12 +90,8 @@ export R_LIBS_USER='/home/blair/R'
 export PATH=/home/blair/Dropbox/bin:$PATH
 export PATH=/home/blair/.local/bin:$PATH
 
-# set editor to vim
-EDITOR=/usr/bin/nvim    
-
 # colors
-eval $(env TERM=xterm256-color dircolors /home/blair/Dropbox/cloud_work/github/blair_dots/bash/dircolors.txt)
-
+eval $(env TERM=xterm256-color dircolors /home/blair/.config/dircolors.txt)
 
 # firefox wayland
 if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
