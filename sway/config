@@ -22,7 +22,7 @@ bindsym shift+space exec $menu
 input * xkb_numlock enable
 
 # wallpaper 
-output * bg /home/blair/.config/sway/resources/backgrounds/mw.jpg fill
+output * bg /home/blair/.config/sway/mw.jpg fill
 
 # font for window titles. 
 font pango:DejaVu Sans Mono 10
