@@ -34,3 +34,17 @@ nnoremap fj  :w<CR>
 
 colorscheme xcode-default
 
+
+" plugin section
+call plug#begin('~/.local/share/nvim/plugged')
+
+Plug 'junegunn/goyo.vim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'rudism/telescope-dict.nvim'
+
+call plug#end()
+
+" map thesaurus
+nnoremap <leader>t <cmd>lua require('telescope').extensions.dict.synonyms()<cr>
+

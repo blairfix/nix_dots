@@ -35,3 +35,11 @@ colorscheme vc
 " line number colors
 highlight LineNr ctermfg=darkgrey ctermbg=black
 
+
+" plugin section
+call plug#begin('~/.local/share/nvim/plugged')
+
+" goyo
+Plug 'junegunn/goyo.vim'
+
+call plug#end()
