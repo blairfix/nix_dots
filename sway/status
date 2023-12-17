@@ -11,7 +11,7 @@ then
 
     # battery
     battery_info=$(upower --show-info $(upower --enumerate |\
-    grep 'BAT') | grep -E "percentage" | awk '{print $2}')
+    grep 'BAT') | grep -E  "percentage" | awk '{print $2}')
 
 
     # laptop output
