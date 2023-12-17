@@ -1,6 +1,8 @@
 #!/bin/bash
 
-mkdir -p ~/.config/sway
+# install setting
+config=~/.config/sway
+mkdir -p  $config
 
-# update 
-cp config ~/.config/sway
+cp config $config
+cp -r resources $config

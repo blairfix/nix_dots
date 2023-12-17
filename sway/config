@@ -10,20 +10,19 @@ set $down j
 set $up k
 set $right l
 
-# Your preferred terminal emulator
+# terminal
 set $term alacritty
 
-# Application launcher
+# application launcher
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 5 
 set $menu exec $term --class=launcher -e /usr/bin/sway-launcher-desktop
 bindsym shift+space exec $menu
-
 
 # number lock on
 input * xkb_numlock enable
 
 # wallpaper 
-output * bg /home/blair/Dropbox/backgrounds/milky-way-g73224e2c3_1920.jpg fill
+output * bg /home/blair/.config/sway/resources/backgrounds/mw.jpg fill
 
 # font for window titles. 
 font pango:DejaVu Sans Mono 10
@@ -140,26 +139,25 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
-
 # resize window
 mode "resize" {
 
-	# keyboard
-	bindsym j resize shrink width 5 px or 1 ppt
-	bindsym k resize grow height 5 px or 1 ppt
-	bindsym l resize shrink height 5 px or 1 ppt
-	bindsym semicolon resize grow width 5px or 1 ppt
+    # keyboard
+    bindsym j resize shrink width 5 px or 1 ppt
+    bindsym k resize grow height 5 px or 1 ppt
+    bindsym l resize shrink height 5 px or 1 ppt
+    bindsym semicolon resize grow width 5px or 1 ppt
 
-	# arrow keys
-	bindsym Left resize shrink width 5 px or 1 ppt
-	bindsym Down resize grow height 5 px or 1 ppt
-	bindsym Up resize shrink height 5 px or 1 ppt
-	bindsym Right resize grow width 5 px or 1 ppt
+    # arrow keys
+    bindsym Left resize shrink width 5 px or 1 ppt
+    bindsym Down resize grow height 5 px or 1 ppt
+    bindsym Up resize shrink height 5 px or 1 ppt
+    bindsym Right resize grow width 5 px or 1 ppt
 
-	# leave resize mode
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-	bindsym $mod+r mode "default"
+    # leave resize mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -183,22 +181,20 @@ bindsym $mod+g exec /home/blair/Dropbox/bin/gvim
 # disable xwayland
 #xwayland disable
 
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
+# status bar
 bar {
 
     position bottom
 
-   # time
-    status_command while /home/blair/Dropbox/bin/status.sh; do sleep 20; done
+	# time
+	status_command while /home/blair/.config/sway/resources/scripts/status.sh; do sleep 20; done
 
-    colors {
+	colors {
 
-        statusline #ffffff
-	background #626262
+	    statusline #ffffff
+		background #626262
 
-    }
+	}
 
     # font
     font pango:Ubuntu 13

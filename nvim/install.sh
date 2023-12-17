@@ -1,8 +1,18 @@
 #!/bin/bash
 
-# make config directory
-mkdir -p ~/.config/nvim
-cp init.vim ~/.config/nvim/
+config=~/.config/nvim
 
-# theme
-./get_theme.sh
+# copy to config
+mkdir -p $config
+cp init.vim gvim.vim $config
+
+
+# download themes
+cd 
+git clone https://github.com/flazz/vim-colorschemes.git 
+
+cd vim-colorschemes
+cp -r * $config
+
+cd 
+trash vim-colorschemes
