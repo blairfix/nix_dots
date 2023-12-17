@@ -1,18 +1,18 @@
 #!/bin/bash
 
-config=~/.config/nvim
+config="/home/blair/.config/nvim/"
 
 # copy to config
 mkdir -p $config
-cp init.vim gvim.vim $config
-
+cp init.vim $config
+cp gvim.vim $config
 
 # download themes
-cd 
+cd ~/Downloads
 git clone https://github.com/flazz/vim-colorschemes.git 
 
 cd vim-colorschemes
 cp -r * $config
 
-cd 
+cd ~/Downloads
 trash vim-colorschemes

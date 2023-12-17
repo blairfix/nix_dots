@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install setting
-config=~/.config/sway
+config="home/blair/.config/sway"
 mkdir -p  $config
 
 cp config $config
