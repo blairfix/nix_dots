@@ -10,5 +10,5 @@ mv ~/bashrc ~/.bashrc
 cp dircolors.txt ~/.config
 
 # source bash file
-exec bash
+#exec bash
 
