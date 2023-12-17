@@ -4,8 +4,10 @@ config="/home/blair/.config/nvim/"
 
 # copy to config
 mkdir -p $config
-cp init.vim $config
-cp gvim.vim $config
+cp init.vim gvim.vim $config
+
+# copy scripts
+cp gvim v /home/blair/bin
 
 # download themes
 cd ~/Downloads
