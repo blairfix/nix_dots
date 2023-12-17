@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir="home/blair/.config/alacritty/"
+dir="/home/blair/.config/alacritty/"
 
 mkdir -p  $dir
 cp alacritty.yml $dir
