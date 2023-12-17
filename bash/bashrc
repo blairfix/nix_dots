@@ -51,11 +51,6 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 alias l='eza'
 alias lx='eza -l'
 
-# alias file
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -75,20 +70,11 @@ fi
 # use radian for R
 alias "R=radian"
 
-# use v for nvim
-alias "v=nvim"
 
-# feh
-alias "feh=feh -R 1 --image-bg grey20 --scale-down --auto-zoom"
-
-
-# set directory for R packages
-export R_LIBS_USER='/home/blair/R'
-
-
-# add dropbox/bin to path
+# add path
 export PATH=/home/blair/Dropbox/bin:$PATH
 export PATH=/home/blair/.local/bin:$PATH
+export PATH=/home/blair/bin:$PATH
 
 # colors
 eval $(env TERM=xterm256-color dircolors /home/blair/.config/dircolors.txt)
