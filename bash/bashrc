@@ -68,7 +68,7 @@ fi
 
 
 # use radian for R
-alias "R=radian"
+alias "R=radian --vanilla"
 
 
 # add path
