@@ -14,9 +14,8 @@ if [ $host == 'blair-server' ]
 then
    sed -i 's/font-size-here/11/g' "$dir"/alacritty.toml
    sed -i 's/font-size-here/11/g' "$dir"/alacritty.yml
-
 else
     sed -i 's/font-size-here/13/g' "$dir"/alacritty.toml
-   sed -i 's/font-size-here/11/g' "$dir"/alacritty.yml
+    sed -i 's/font-size-here/13/g' "$dir"/alacritty.yml
 fi
 
