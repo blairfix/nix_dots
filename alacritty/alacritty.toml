@@ -84,7 +84,7 @@ shape = "Block"
 TERM = "alacritty"
 
 [font]
-size = 13
+size = font-size-here
 
 [font.bold]
 family = "dejavu sans mono"
