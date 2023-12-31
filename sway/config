@@ -144,20 +144,20 @@ mode "resize" {
 
     # keyboard
     bindsym j resize shrink width 5 px or 1 ppt
-    bindsym k resize grow height 5 px or 1 ppt
-    bindsym l resize shrink height 5 px or 1 ppt
-    bindsym semicolon resize grow width 5px or 1 ppt
+	bindsym k resize grow height 5 px or 1 ppt
+	bindsym l resize shrink height 5 px or 1 ppt
+	bindsym semicolon resize grow width 5px or 1 ppt
 
-    # arrow keys
-    bindsym Left resize shrink width 5 px or 1 ppt
-    bindsym Down resize grow height 5 px or 1 ppt
-    bindsym Up resize shrink height 5 px or 1 ppt
-    bindsym Right resize grow width 5 px or 1 ppt
+	# arrow keys
+	bindsym Left resize shrink width 5 px or 1 ppt
+	bindsym Down resize grow height 5 px or 1 ppt
+	bindsym Up resize shrink height 5 px or 1 ppt
+	bindsym Right resize grow width 5 px or 1 ppt
 
-    # leave resize mode
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-    bindsym $mod+r mode "default"
+	# leave resize mode
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -183,21 +183,6 @@ bindsym $mod+g exec /home/blair/Dropbox/bin/gvim
 
 # status bar
 bar {
-
-    position bottom
-
-	# time
-	status_command while /home/blair/bin/status ; do sleep 20; done
-
-	colors {
-
-	    statusline #ffffff
-		background #626262
-
-	}
-
-    # font
-    font pango:Ubuntu 13
-
+    swaybar_command waybar
 }
 
