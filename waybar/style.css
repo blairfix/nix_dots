@@ -5,8 +5,8 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 1);
+    background-color: #212121;
+    border-bottom: 0px solid rgba(100, 114, 125, 1);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -108,17 +108,18 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: #212121;
+    color: #eeeeee;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #212121;
+    color: #eeeeee;
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
+    background-color: #212121;
+    color: #eeeeee;
 }
 
 @keyframes blink {
