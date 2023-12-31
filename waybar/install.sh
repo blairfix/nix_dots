@@ -4,4 +4,5 @@
 config="/home/blair/.config/waybar"
 mkdir -p  $config
 cp config $config
+cp style.css $config
 
