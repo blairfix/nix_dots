@@ -57,7 +57,7 @@ white = "#c5c8c6"
 yellow = "#f0c674"
 
 [colors.primary]
-background = "#030303"
+background = "#000000"
 foreground = "#c5c8c6"
 
 [colors.search.focused_match]
