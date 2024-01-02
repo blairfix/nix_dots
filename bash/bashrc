@@ -72,7 +72,7 @@ alias "R=radian"
 
 
 # add path
-export PATH=/home/blair/Dropbox/bin:$PATH
+export PATH=/home/blair/cloud_work/bin:$PATH
 export PATH=/home/blair/.local/bin:$PATH
 export PATH=/home/blair/bin:$PATH
 
