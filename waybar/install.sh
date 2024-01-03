@@ -14,6 +14,6 @@ if [ $host == 'blair-server' ]
 then
    sed -i 's/font-size-here/16/g' "$config"/style.css
 else
-    sed -i 's/font-size-here/18/g' "$dir"/style.css
+    sed -i 's/font-size-here/18/g' "$config"/style.css
 fi
 
