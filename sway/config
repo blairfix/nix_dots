@@ -163,10 +163,10 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # clean function
-bindsym $mod+p exec /home/blair/Dropbox/bin/clean.sh
+bindsym $mod+p exec /home/blair/cloud_work/bin/clean.sh
 
 # latex
-bindsym $mod+z exec /home/blair/Dropbox/bin/latex_run.sh
+bindsym $mod+z exec /home/blair/cloud_work/bin/latex_run.sh
 
 # gammastep
 exec gammastep &
@@ -176,7 +176,7 @@ bindsym $mod+x exec MOZ_ENABLE_WAYLAND=1 firefox
 bindsym $mod+shift+x exec MOZ_ENABLE_WAYLAND=1 firefox -P "blog"
 
 # gvim
-bindsym $mod+g exec /home/blair/Dropbox/bin/gvim
+bindsym $mod+g exec /home/blair/cloud_work/bin/gvim
 
 # disable xwayland
 #xwayland disable
