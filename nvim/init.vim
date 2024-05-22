@@ -30,9 +30,10 @@ inoremap fj  <ESC>:w<CR>
 nnoremap fj  :w<CR>
 
 " color scheme
-colorscheme vc
+colorscheme tokyonight-night
 
-" line number colors
-highlight LineNr ctermfg=darkgrey ctermbg=black
-
+highlight Normal guibg=none
+highlight NonText guibg=none
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
 

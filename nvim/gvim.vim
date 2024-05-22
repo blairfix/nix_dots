@@ -32,6 +32,12 @@ set noshowcmd
 inoremap fj  <ESC>:w<CR>	   
 nnoremap fj  :w<CR>	   
 
-colorscheme xcode-default
+" color scheme
+colorscheme oxocarbon
+"colorscheme onedark
 
+highlight Normal guibg=none 
+highlight NonText guibg=none
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
 
