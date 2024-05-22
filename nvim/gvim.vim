@@ -33,8 +33,7 @@ inoremap fj  <ESC>:w<CR>
 nnoremap fj  :w<CR>	   
 
 " color scheme
-colorscheme oxocarbon
-"colorscheme onedark
+colorscheme lightning
 
 highlight Normal guibg=none 
 highlight NonText guibg=none

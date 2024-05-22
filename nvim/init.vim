@@ -30,7 +30,8 @@ inoremap fj  <ESC>:w<CR>
 nnoremap fj  :w<CR>
 
 " color scheme
-colorscheme tokyonight-night
+colorscheme hybrid
+
 
 highlight Normal guibg=none
 highlight NonText guibg=none
