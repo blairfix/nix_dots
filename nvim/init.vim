@@ -30,11 +30,16 @@ inoremap fj  <ESC>:w<CR>
 nnoremap fj  :w<CR>
 
 " color scheme
-colorscheme hybrid
-
+colorscheme minimalist
 
 highlight Normal guibg=none
 highlight NonText guibg=none
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
+
+" highlight
+highlight LineNr    gui=NONE	guifg=#707070	guibg=NONE
+
+" comments
+highlight Comment  guifg=#6D8AA8 gui=NONE
 
