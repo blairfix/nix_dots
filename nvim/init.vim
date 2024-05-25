@@ -37,9 +37,15 @@ highlight NonText guibg=none
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 
-" highlight
-highlight LineNr    gui=NONE	guifg=#707070	guibg=NONE
+" linenumbers
+highlight LineNr    gui=NONE	guifg=#606060	guibg=NONE
 
 " comments
-highlight Comment  guifg=#6D8AA8 gui=NONE
+"highlight Comment  guifg=#6D8AA8 gui=NONE
+highlight Comment  guifg=#88A5C3 gui=NONE
 
+" normal color
+highlight Normal guifg=#bbbbbb gui=NONE
+
+" function
+highlight Function guifg=#8abeb7
