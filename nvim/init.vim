@@ -41,7 +41,6 @@ highlight NonText ctermbg=none
 highlight LineNr    gui=NONE	guifg=#606060	guibg=NONE
 
 " comments
-"highlight Comment  guifg=#6D8AA8 gui=NONE
 highlight Comment  guifg=#88A5C3 gui=NONE
 
 " normal color
@@ -49,3 +48,16 @@ highlight Normal guifg=#bbbbbb gui=NONE
 
 " function
 highlight Function guifg=#8abeb7
+
+" strings
+highlight String guifg=#d7875f
+
+" delimiter
+highlight Delimiter guifg=#b294bb
+
+" operator
+highlight Operator guifg=#9c5500
+
+" special character
+
+highlight SpecialChar guifg=#9c5500
