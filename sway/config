@@ -178,6 +178,9 @@ bindsym $mod+shift+x exec MOZ_ENABLE_WAYLAND=1 firefox -P "blog"
 # gvim
 bindsym $mod+g exec /home/blair/cloud_work/bin/gvim
 
+# fix sway gnome and waybar issues
+exec systemctl --user import-environment
+
 # disable xwayland
 #xwayland disable
 

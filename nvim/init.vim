@@ -59,5 +59,4 @@ highlight Delimiter guifg=#b294bb
 highlight Operator guifg=#9c5500
 
 " special character
-
 highlight SpecialChar guifg=#9c5500
