@@ -1,5 +1,10 @@
+" detect file type
+filetype plugin indent on
+syntax on
+autocmd FileType markdown setlocal syntax=markdown
+
+
 "" general
-syntax on		    " syntax highlighting
 set linebreak		    " break lines at word (requires wrap lines)
 set textwidth=1000	    " line wrap (number of cols)
 set showmatch		    " highlight matching brace
